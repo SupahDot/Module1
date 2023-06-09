@@ -11,7 +11,7 @@ To use the program, run the following command in your terminal:
 python3 DLL.py
 ```
 
-Once the program starts, and you are prompted with the options menu, input 5, then the first stops name and duration to begin building the TrainLine. The options are the following:
+Once the program starts, and you are prompted with the options menu, input 5. Next, input the first stop's name and duration to begin building the TrainLine. The options are the following:
 1. Display Trainline
 2. Move to Next Stop
 3. Move to previous Stop

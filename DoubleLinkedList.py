@@ -134,10 +134,20 @@ class TrainLine:
             dur += it.duration
             it = it.next
             # Iterates through until pointer is at the destination
-        print("Duration to  " + self.destination.stationname +
-              " from  " + self.currentstop.stationname + ":")
-        return dur
-
+        dur = str(dur)
+        print("Duration to " + self.destination.stationname +
+              " from " + self.currentstop.stationname + ": "+dur)
+    
+    @staticmethod
+    def leave():
+        """
+        Summary: Closes the TrainLine Program
+        :return: None
+        """
+        print("Thank you for using the TrainLine")
+        sys.exit(0)
+       
+      
 
 TrainLine = TrainLine()
 print('Hello! Welcome to the Trainline. Please Start with Step 5 to initialize List')
@@ -165,7 +175,8 @@ while True:
         "5. Add Stop to beginning\n"
         "6. Add Stop to End\n"
         "7. Set Destination\n"
-        "8. Calculate total duration to destination\n")
+        "8. Calculate total duration to destination\n"
+        "9. Close TrainLine\n")
     if choice == '2':
         if TrainLine.currentstop is not None:
             TrainLine.currentstop = TrainLine.currentstop.next
@@ -212,3 +223,6 @@ while True:
             print("CANNOT DO! PLEASE SET THE DESTINATION FIRST")
         else:
             TrainLine.calcduration()
+    elif choice == '9':
+        TrainLine.leave()
+        
